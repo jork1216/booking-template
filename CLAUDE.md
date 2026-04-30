@@ -57,6 +57,14 @@ Avoid:
 - Viewport-scaled font sizes.
 - Mixing many font families.
 
+## Language And Copy
+
+- Use clear, simple wording for a broad guest audience.
+- Keep the tone calm, helpful, and practical rather than overly formal or exclusive.
+- Prefer direct phrases like "help confirm your room" or "details for your visit" over luxury-heavy wording like "curate your perfect stay."
+- Mention real guest needs: rooms, dates, directions, reservations, availability, and next steps.
+- Keep short intro copy to 1-2 sentences so it fits comfortably on the mobile layout.
+
 ## Font Sizes
 
 Preferred Tailwind sizes:

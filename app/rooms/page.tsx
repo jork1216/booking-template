@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
@@ -138,12 +139,12 @@ export default function Rooms() {
                     <span>{room.rate}</span>
                   </span>
                 </p>
-                <button
-                  type="button"
+                <Link
+                  href="/booking"
                   className="flex h-12 w-full items-center justify-center border-l-4 border-orange-400 bg-blue-950 text-xs font-bold uppercase tracking-[0.18em] text-white hover:bg-[#071a33]"
                 >
                   Inquire Now
-                </button>
+                </Link>
               </div>
             </div>
           </article>
