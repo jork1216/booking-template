@@ -64,16 +64,16 @@ export default function Rooms() {
 
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-5 text-center text-white">
           <p className="mb-4 text-lg uppercase tracking-[0.3em]">
-            Private
+            Clean
             <br />
-            Sanctuaries
+            &amp; Comfortable
           </p>
           <h1 className="font-serif text-2xl leading-snug tracking-[0.05em]">
-            Rooms & Suites
+            Rooms for Every Stay
           </h1>
           <p className="mt-5 max-w-72 text-sm leading-relaxed text-stone-100">
-            Quietly composed alpine suites designed for privacy, warm service,
-            and long restorative stays.
+            Practical rooms with the essentials you need for an easy, restful
+            visit in Lucena City.
           </p>
         </div>
       </section>

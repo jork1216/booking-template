@@ -24,11 +24,11 @@ export default function Home() {
 
         <section className="relative z-10 flex h-full flex-col items-center justify-center gap-4">
           <span className="block text-lg text-center uppercase tracking-[0.3em] text-white">
-            A Sanctuary of <br />Stillness
+            A Comfortable <br />Place to Stay
           </span>
 
           <span className="block font-serif text-white tracking-[0.05em]">
-            Experience Ethereal Grandeur
+            Simple Comfort for Every Guest
           </span>
           
           <Link
@@ -119,13 +119,18 @@ export default function Home() {
             Direct Assistance
           </h2>
           <p className="mx-auto max-w-72 text-base text-stone-700">
-            Our concierge is available 24/7 to curate your perfect stay before
-            you even arrive.
+            Message or call us anytime for room questions, reservations, or
+            directions before you arrive.
           </p>
         </div>
 
         <div className="space-y-8">
-          <button className="flex min-h-30 w-full items-center gap-7 border-l-4 border-orange-300 bg-white px-9 text-left text-blue-950">
+          <a
+            href="https://www.facebook.com/john.carlo.n.ramos.2024"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex min-h-30 w-full items-center gap-7 border-l-4 border-orange-300 bg-white px-9 text-left text-blue-950"
+          >
             <svg
               className="h-6 w-6 shrink-0"
               viewBox="0 0 24 24"
@@ -149,7 +154,7 @@ export default function Home() {
                 our team
               </span>
             </span>
-          </button>
+          </a>
 
           <button className="mb-10 flex min-h-25 w-full items-center gap-7 border-l-4 border-blue-950 bg-white px-9 text-left text-blue-950">
             <svg
