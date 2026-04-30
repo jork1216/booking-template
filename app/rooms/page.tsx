@@ -52,7 +52,7 @@ export default function Rooms() {
     <div className="mx-auto min-h-[844px] w-full max-w-[500px] bg-stone-100">
       <Navbar />
         {/* hero */}
-      <section className="relative h-118 bg-blue-950">
+      <section className="relative h-140 bg-blue-950">
         <Image
           src="/images/roomshero.webp"
           alt="Mountain resort suite at Elysia Reserve"

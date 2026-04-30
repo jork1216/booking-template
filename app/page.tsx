@@ -47,13 +47,12 @@ export default function Home() {
       <section className="bg-stone-200 px-5 py-6">
         <p className="mt-12 mb-5 text-sm uppercase text-yellow-900">THE LOCATION</p>
         <h2 className="mb-5 font-serif text-1xl text-blue-950">
-          Prestigious Serenity
+          Cityside Convenience
         </h2>
         <p className="mb-10 text-sm text-stone-600">
-          Nestled amidst the emerald peaks of the High Sierras, Elysia Reserve
-          offers a secluded escape where the mountains meet the clouds. Our
-          estate spans 400 acres of private alpine forest, providing an
-          unparalleled sense of exclusivity and breath-taking natural beauty.
+          Set near SM City Lucena, Elysia Reserve places you close to the
+          city&apos;s shopping, dining, transport, and everyday essentials while
+          keeping your stay calm, comfortable, and easy to navigate.
         </p>
         {/* address */}
         <div className="space-y-4">
@@ -73,7 +72,8 @@ export default function Home() {
             <div>
               <p className="text-xs uppercase font-bold text-blue-950">ADDRESS</p>
               <p className="text-sm leading-snug text-stone-800">
-                1200 Ethereal Way, Saint-Moritz, Switzerland
+                SM City Lucena, Maharlika Highway corner,
+                Ibabang Dupay, Lucena City, Quezon
               </p>
             </div>
           </div>
@@ -94,14 +94,14 @@ export default function Home() {
             <div>
               <p className="text-xs uppercase font-bold text-blue-950">PROXIMITY</p>
               <p className="text-sm leading-snug text-stone-800">
-                15 Minutes from Private Jet Terminal
+                Near Lucena&apos;s mall, dining, and transport connections
               </p>
             </div>
           </div>
 
           <div className="mt-5 mb-15 overflow-hidden rounded-lg border border-stone-300 shadow-2xl">
             <iframe
-              title="Map showing Elysia Reserve location"
+              title="Map showing SM City Lucena location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.298871703072!2d121.62170767425457!3d13.940801792891351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd4caa7eb2b77d%3A0xe594a2eea8cfc2c2!2sSM%20City%20Lucena!5e0!3m2!1sen!2sph!4v1777384572226!5m2!1sen!2sph"
               className="h-56 w-full"
               loading="lazy"
@@ -180,40 +180,40 @@ export default function Home() {
         <div className="mt-10 space-y-6">
           <div className="relative h-80 overflow-hidden bg-stone-300 shadow-sm">
             <Image
-              src="/images/hotel1.webp"
-              alt="The Royal Suite"
+              src="/images/standardroom.webp"
+              alt="Standard Room"
               fill
               className="object-cover"
             />
             <div className="absolute inset-0 bg-black/50" />
             <h2 className="absolute bottom-8 left-8 font-serif text-lg text-white">
-              The Royal Suite
+              Standard Room
             </h2>
           </div>
 
           <div className="relative h-80 overflow-hidden bg-stone-300 shadow-sm">
             <Image
-              src="/images/hotel1.webp"
-              alt="The Alpine Suite"
+              src="/images/familyroom.webp"
+              alt="Family Room"
               fill
               className="object-cover"
             />
             <div className="absolute inset-0 bg-black/50" />
             <h2 className="absolute bottom-8 left-8 font-serif text-lg text-white">
-              The Alpine Suite
+              Family Room
             </h2>
           </div>
 
           <div className="relative h-80 overflow-hidden bg-stone-300 shadow-sm">
             <Image
-              src="/images/hotel1.webp"
-              alt="The Serenity Suite"
+              src="/images/deluxeroom.webp"
+              alt="Deluxe Room"
               fill
               className="object-cover"
             />
             <div className="absolute inset-0 bg-black/50" />
             <h2 className="absolute bottom-8 left-8 font-serif text-lg text-white">
-              The Serenity Suite
+              Deluxe Room
             </h2>
           </div>
         </div>
