@@ -49,7 +49,7 @@ const rooms = [
 
 export default function Rooms() {
   return (
-    <div className="mx-auto min-h-[844px] w-full max-w-[402px] bg-stone-100">
+    <div className="mx-auto min-h-[844px] w-full max-w-[500px] bg-stone-100">
       <Navbar />
         {/* hero */}
       <section className="relative h-118 bg-blue-950">
