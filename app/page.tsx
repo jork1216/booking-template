@@ -37,14 +37,17 @@ export default function Home() {
           >
             Book a Room
           </Link>
-          <button className="h-12 w-60 border border-white bg-white/5 text-sm text-white backdrop-blur">
+          <button
+            id="check-availability"
+            className="h-12 w-60 border border-white bg-white/5 text-sm text-white backdrop-blur"
+          >
             Check Availability
           </button>
         </section>
       </div>
 
       {/* location */}
-      <section className="bg-stone-200 px-5 py-6">
+      <section id="location" className="bg-stone-200 px-5 py-6">
         <p className="mt-12 mb-5 text-sm uppercase text-yellow-900">THE LOCATION</p>
         <h2 className="mb-5 font-serif text-1xl text-blue-950">
           Cityside Convenience
@@ -113,7 +116,7 @@ export default function Home() {
       </section>
 
       {/* direct assistance */}
-      <section className="bg-stone-300 px-5 py-12">
+      <section id="direct-assistance" className="bg-stone-300 px-5 py-12">
         <div className="mb-16 text-center">
           <h2 className="mt-10 mb-5 font-serif text-lg text-blue-950">
             Direct Assistance
