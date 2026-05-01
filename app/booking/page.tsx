@@ -19,6 +19,7 @@ function BookingContent() {
   const roomType = searchParams.get("roomType")
 
   const [guests, setGuests] = useState(1);
+  const [message, setMessage] = useState("");
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -43,16 +44,20 @@ function BookingContent() {
       specialRequests,
     }
 
-    await fetch("/api/bookings", {
+    const response = await fetch("/api/bookings", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(booking),
     })
-    
+
+    const data = await response.json();
+    setMessage(data.message);
+
     form.reset();
     setGuests(1);
+
   }
 
   return (
@@ -194,9 +199,15 @@ function BookingContent() {
             </div>
           </div>
 
+          {message && (
+            <p className="mt-3 text-center text-sm text-green-700">
+              {message}
+            </p>
+          )}
+
           <button
             type="submit"
-            className="mx-auto mt-10 flex h-14 w-full max-w-80 items-center justify-center gap-5 border-l-4 border-orange-400 bg-blue-950 text-xs font-bold uppercase tracking-[0.2em] text-white hover:bg-[#071a33]"
+            className="mx-auto mt-5 flex h-14 w-full max-w-80 items-center justify-center gap-5 border-l-4 border-orange-400 bg-blue-950 text-xs font-bold uppercase tracking-[0.2em] text-white hover:bg-[#071a33]"
           >
             Submit Inquiry
             <svg

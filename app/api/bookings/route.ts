@@ -18,5 +18,5 @@ export async function POST(request: Request) {
     },
   })
 
-  return Response.json(bookingInput)
+  return Response.json({message: "Inquiry Sent!", booking: bookingInput})
 }

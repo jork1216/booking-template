@@ -158,7 +158,11 @@ export default function Navbar() {
             <span className="text-lg">Availability</span>
           </Link>
 
-          <div className="flex items-center gap-5 border-b border-stone-200 py-4">
+          <Link
+            href="/login"
+            onClick={handleMenu}
+            className="flex items-center gap-5 border-b border-stone-200 py-4"
+          >
             <svg
               className="h-5 w-5 shrink-0 text-stone-400"
               viewBox="0 0 24 24"
@@ -173,7 +177,7 @@ export default function Navbar() {
               <path d="M15 12H3" />
             </svg>
             <span className="text-lg">Log In</span>
-          </div>
+          </Link>
         </div>
 
         <div className="mt-14 space-y-7 text-sm normal-case text-blue-950">

@@ -8,7 +8,7 @@ Use this guide to keep every page and component visually consistent. This projec
 
 - Mood: serene, private, elegant, refined, high-end hospitality.
 - Visual language: quiet luxury, strong vertical spacing, editorial photography, simple geometry, restrained colors.
-- Layout: mobile-first with the main page constrained around `max-w-[402px]` unless a future desktop layout is intentionally designed.
+- Layout: mobile-first with the main page constrained around `max-w-[500px]` unless a future desktop layout is intentionally designed.
 - Shape language: mostly squared or subtly rounded. Avoid pill buttons, playful shapes, bubbly cards, loud gradients, or decorative blobs.
 - Surfaces: use full-width section bands instead of nested cards. Cards are only for repeated content, image tiles, modals, or contained tools.
 
