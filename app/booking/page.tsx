@@ -1,11 +1,20 @@
 "use client";
 
 import { useState } from "react";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function Booking() {
+  return (
+    <Suspense fallback={null}>
+      <BookingContent />
+    </Suspense>
+  );
+}
+
+function BookingContent() {
   const searchParams = useSearchParams()
   const roomType = searchParams.get("roomType")
 
