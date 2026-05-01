@@ -140,7 +140,7 @@ export default function Rooms() {
                   </span>
                 </p>
                 <Link
-                  href="/booking"
+                  href={`/booking?roomType=${encodeURIComponent(room.name)}`}
                   className="flex h-12 w-full items-center justify-center border-l-4 border-orange-400 bg-blue-950 text-xs font-bold uppercase tracking-[0.18em] text-white hover:bg-[#071a33]"
                 >
                   Inquire Now

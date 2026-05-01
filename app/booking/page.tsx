@@ -1,18 +1,63 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function Booking() {
+  const searchParams = useSearchParams()
+  const roomType = searchParams.get("roomType")
+
   const [guests, setGuests] = useState(1);
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+
+    const form = event.currentTarget;
+    const formData = new FormData(form)
+
+    const fullName = formData.get("fullName")
+    const contactNumber = formData.get("contactNumber")
+    const checkIn = formData.get("checkIn")
+    const checkOut = formData.get("checkOut")
+    const guests = formData.get("guests")
+    const specialRequests = formData.get("specialRequests")
+    
+    const booking = {
+      fullName,
+      contactNumber,
+      checkIn,
+      checkOut,
+      roomType,
+      guests,
+      specialRequests,
+    }
+
+    await fetch("/api/bookings", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(booking),
+    })
+    
+    form.reset();
+    setGuests(1);
+  }
 
   return (
     <div className="mx-auto min-h-[844px] w-full max-w-[500px] bg-stone-100">
       <Navbar />
+
+      {/*header */}
       <section className="bg-stone-100 px-5 py-12 text-center">
         <h1 className="font-serif text-2xl leading-snug text-blue-950">
-          Booking Inquiry
+          Booking Inquiry for 
+          <br /> 
+          <span className="text-3xl">
+            {roomType}
+          </span>
         </h1>
         <p className="mx-auto mt-5 max-w-80 text-base italic leading-relaxed text-stone-500">
           Share your stay details below and our team will help confirm the right
@@ -20,8 +65,11 @@ export default function Booking() {
         </p>
       </section>
 
+      {/*form */}
       <section className="bg-stone-100 px-5 pb-12">
-        <form className="border border-l-4 border-stone-300 border-l-orange-400 bg-white px-8 py-10 shadow-sm">
+        <form 
+          onSubmit={handleSubmit}
+          className="border border-l-4 border-stone-300 border-l-orange-400 bg-white px-8 py-10 shadow-sm">
           <div className="space-y-8">
             <div>
               <label
@@ -83,42 +131,6 @@ export default function Booking() {
                 type="date"
                 className="mt-3 h-12 w-full border-b border-stone-300 bg-transparent text-base text-stone-700 outline-none focus:border-blue-950"
               />
-            </div>
-
-            <div>
-              <label
-                htmlFor="room-type"
-                className="block text-xs font-bold uppercase tracking-[0.1em] text-blue-950"
-              >
-                Room Type
-              </label>
-              <div className="relative mt-3">
-                <select
-                  id="room-type"
-                  name="roomType"
-                  defaultValue=""
-                  className="h-12 w-full appearance-none border-b border-stone-300 bg-transparent pr-10 text-base text-stone-700 outline-none focus:border-blue-950"
-                >
-                  <option value="" disabled>
-                    Select a room
-                  </option>
-                  <option>Standard Room</option>
-                  <option>Family Room</option>
-                  <option>Deluxe Room</option>
-                </select>
-                <svg
-                  aria-hidden="true"
-                  className="pointer-events-none absolute right-0 top-3 h-6 w-6 text-stone-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </div>
             </div>
 
             <div>

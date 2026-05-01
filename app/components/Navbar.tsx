@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-
 export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 flex h-16 items-center justify-between bg-white px-4 font-serif uppercase text-blue-950">
@@ -28,9 +27,11 @@ export default function Navbar() {
         </Link>
 
       </div>
-      <button className="tracking-[0.1em] flex items-center justify-center bg-blue-950 px-5 py-2 text-sm text-white hover:bg-[#071a33]">
+      <Link
+        href="/rooms"
+        className="tracking-[0.1em] flex items-center justify-center bg-blue-950 px-5 py-2 text-sm text-white hover:bg-[#071a33]">
         RESERVE
-      </button>
+      </Link>
     </nav>
   );
 }

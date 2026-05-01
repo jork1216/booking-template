@@ -10,7 +10,7 @@ export default function Home() {
       <Navbar />
 
       {/* hero */}
-      <div className="relative h-140 bg-green-700">
+      <div className="relative h-140 bg-blue-950">
         <Image
           src="/images/hotel1.webp"
           alt="Hotel Image"

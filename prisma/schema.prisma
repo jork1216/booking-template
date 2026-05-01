@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model BookingInquiry {
+  id              String   @id @default(cuid())
+
+  fullName        String
+  contactNumber   String
+  checkIn         DateTime
+  checkOut        DateTime
+  roomType        String
+  guests          Int
+  specialRequests String?
+
+  createdAt       DateTime @default(now())
+}
